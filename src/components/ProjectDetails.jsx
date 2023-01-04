@@ -88,7 +88,7 @@ const     ProjectDetails = ({ project }) => {
                 
                <h5 className='text-lg font-medium normal-case text-gray-400'><span className='text-lg font-semibold normal-case text-gray-200 mr-1 pt-6'>The story : </span >{project?.title}</h5>
               </div>
-              <p className='text-gray-400 text-sm normal font-fontGlobal my-2'>{project?.description}</p>
+              <p className='text-gray-400 text-sm normal-case font-fontGlobal my-2'>{project?.description}</p>
               <div className="w-full bg-gray-300 overflow-hidden rounded-full mt-2 mb-1">
               <div
               className="bg-orange-600 text-xs font-medium

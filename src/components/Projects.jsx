@@ -51,30 +51,28 @@ const ProjectCard = ({ project }) => {
           alt={project.title}
           className="rounded-xl h-44 w-full object-cover  shadow-sm"
         />
-
         <div className="pt-2">
-          {/* <h5 className=' font-medium capitalize text-gray-200 text-lg'>{truncate(project.title, 18, 0, 2)}</h5> */}
-          <h5 className=' font-medium capitalize text-gray-200 text-lg'>{project.title.slice(0,22)}...</h5>
-          <p className='text-gray-400 text-md lowercase'>{project.description.slice(0,30)}...</p>
+          <h5 className=' font-semibold capitalize text-gray-200 text-lg'>{project.title.slice(0,22)}...</h5>
+          <p className='text-gray-400 font-light normal-case text-md '>{project.description.slice(0,30)}...</p>
 
           <div className="flex flex-col mt-2 ">
             <div className='flex justify-between items-center '>
-              <small className="text-gray-300 rounded-lg  p-2 bg-gray-800 font-semibold">
+              <small className="text-gray-300 rounded-lg  p-2 bg-gray-800 font-medium text-sm capitalize">
                 {expired ? 'Expired' : daysRemaining(project.expiresAt) + ' left'}
               </small>
               <div>
                 {expired ? (
-                  <small className="text-red-500 rounded-lg  px-2 py-2.5 bg-gray-800 font-semibold">Expired</small>
+                  <small className="text-red-500 rounded-lg  px-2 py-2.5 bg-gray-800 font-medium text-sm">Expired</small>
                 ) : project?.status == 0 ? (
-                  <small className="text-gray-300 rounded-lg  px-2 py-2.5  bg-gray-800 font-semibold ">Open</small>
+                  <small className="text-gray-300 rounded-lg  px-2 py-2.5  bg-gray-800 font-medium text-sm ">Open</small>
                 ) : project?.status == 1 ? (
-                  <small className="bg-orange-500 rounded-lg  px-2 py-2.5 border border-gray-300 font-semibold">Accepted</small>
+                  <small className="bg-orange-500 rounded-lg  px-2 py-2.5 border border-gray-300 font-medium text-sm">Accepted</small>
                 ) : project?.status == 2 ? (
-                  <small className="text-gray-300 rounded-lg  px-2 py-2.5 border border-gray-300 font-semibold ">Reverted</small>
+                  <small className="text-gray-300 rounded-lg  px-2 py-2.5 border border-gray-300 font-medium text-sm ">Reverted</small>
                 ) : project?.status == 3 ? (
-                  <small className="text-red-400 rounded-lg  px-2 py-2.5 border border-gray-300 font-semibold">Deleted</small>
+                  <small className="text-red-400 rounded-lg  px-2 py-2.5 border border-gray-300 font-medium text-sm">Deleted</small>
                 ) : (
-                  <small className="text-orange-500 rounded-lg  px-2 py-2.5 border border-gray-300 font-semibold">Paid</small>
+                  <small className="text-orange-500 rounded-lg  px-2 py-2.5 border border-gray-300 font-medium text-sm">Paid</small>
                 )}
               </div>
             </div>
@@ -92,19 +90,19 @@ const ProjectCard = ({ project }) => {
 
           <div
             className="flex justify-between items-center 
-        font-bold  mb-2 text-gray-200"
+        font-medium  mb-2 text-gray-200"
           >
             <small>{project.raised} ETH Raised</small>
             <small className="flex justify-start items-center">
               <FaEthereum className='text-blue-300 text-medium'/>
-              <span>{project.cost} ETH</span>
+              <span className='text-sm'>{project.cost} ETH</span>
             </small>
           </div>
 
           <div className="flex justify-center border border-gray-300 p-2 rounded-full items-center flex-wrap
-              text-gray-500 font-semibold"
+              text-gray-500 font-semibold bg-gray-800"
           >
-            <small className='text-gray-200 '>
+            <small className='text-gray-200 font-medium text-base'>
               {project.backers} Backer{project.backers == 1 ? '' : 's'}
             </small>
      
