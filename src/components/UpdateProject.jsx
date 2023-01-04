@@ -44,12 +44,12 @@ const UpdateProject = ({ project }) => {
     transform transition-transform duration-300 ${updateModal}`}
     >
       <div
-        className="bg-white shadow-xl shadow-black
-        rounded-xl w-11/12 md:w-3/12 h-7/12 p-6"
+        className="bg-gray-800  shadow-xl shadow-black
+        rounded-xl w-11/12 md:w-3/12 h-7/12 p-3 text-gray-50"
       >
         <form onSubmit={handleSubmit} className="flex flex-col">
           <div className="flex justify-between items-center">
-            <p className="font-semibold">Edit Project</p>
+            <p className="font-semibold text-lg">Edit Project</p>
             <button
               onClick={onClose}
               type="button"
@@ -78,7 +78,7 @@ const UpdateProject = ({ project }) => {
           >
             <input
               className="block w-full rounded-xl bg-transparent
-            border-0 text-sm text-slate-500 focus:outline-none
+            border-0 text-sm text-slate-50 focus:outline-none
             focus:ring-0"
               type="text"
               name="title"
@@ -95,7 +95,7 @@ const UpdateProject = ({ project }) => {
           >
             <input
               className="block w-full bg-transparent
-            border-0 text-sm text-slate-500 focus:outline-none
+            border-0 text-sm text-slate-50 focus:outline-none invert
             focus:ring-0"
               type="date"
               name="date"
@@ -112,7 +112,7 @@ const UpdateProject = ({ project }) => {
           >
             <input
               className="block w-full bg-transparent
-            border-0 text-sm text-slate-500 focus:outline-none
+            border-0 text-sm text-slate-50 focus:outline-none
             focus:ring-0"
               type="url"
               name="imageURL"
@@ -129,7 +129,7 @@ const UpdateProject = ({ project }) => {
           >
             <textarea
               className="block w-full bg-transparent
-            border-0 text-sm text-slate-500 focus:outline-none
+            border-0 text-sm text-slate-50 focus:outline-none
             focus:ring-0"
               type="text"
               name="description"

@@ -22,7 +22,7 @@ const     ProjectDetails = ({ project }) => {
           <img
             src={project?.imageURL}
             alt={project?.title}
-            className="rounded-xl h-64 object-cover sm:w-1/3 w-full"
+            className="rounded-xl h-80 overflow-hidden object-cover sm:w-1/3 w-full"
           />
 
           <div className="flex-1 sm:py-0 py-4 ">
@@ -30,7 +30,7 @@ const     ProjectDetails = ({ project }) => {
               <div>
                 <div className='flex justify-between'>
                   <div className="flex">
-                  <div className="flex justify-start space-x-2 items-center mb-2 gap-2 bg-gray-200 shadow-md py-1 px-2 rounded-full">
+                  <div className="flex justify-start space-x-2 items-center mb-2 gap-2 bg-gray-100 shadow-md py-1 px-2 rounded-full">
                       <Identicons
                         className="rounded-full shadow-md "
                         string={project.owner}
@@ -86,9 +86,9 @@ const     ProjectDetails = ({ project }) => {
             <div>
               <div className='flex items-center'>
                 
-               <h5 className='text-lg font-semibold normal-case text-gray-400'><span className='text-lg font-semibold normal-case text-gray-200 mr-1 pt-3'>The story : </span>{project?.title}</h5>
+               <h5 className='text-lg font-medium normal-case text-gray-400'><span className='text-lg font-semibold normal-case text-gray-200 mr-1 pt-6'>The story : </span >{project?.title}</h5>
               </div>
-              <p className='text-gray-400 text-sm capitalize font-fontGlobal my-2'>{project?.description}</p>
+              <p className='text-gray-400 text-sm normal font-fontGlobal my-2'>{project?.description}</p>
               <div className="w-full bg-gray-300 overflow-hidden rounded-full mt-2 mb-1">
               <div
               className="bg-orange-600 text-xs font-medium

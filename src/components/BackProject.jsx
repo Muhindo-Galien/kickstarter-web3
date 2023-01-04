@@ -24,18 +24,17 @@ const BackProject = ({ project }) => {
     transform transition-transform duration-300 ${backModal}`}
     >
       <div
-        className="bg-white shadow-xl shadow-black
-        rounded-xl w-11/12 md:w-3/12 h-7/12 p-6"
+        className="bg-gray-800 shadow-xl shadow-black
+        rounded-xl w-11/12 md:w-3/12 h-7/12 p-3"
       >
-        <form onSubmit={handleSubmit} className="flex flex-col">
-          <div className="flex justify-between items-center">
-            <p className="font-semibold">{project?.title}</p>
+        <form onSubmit={handleSubmit} className="flex flex-col ">
+          <div className="flex justify-end items-center">
             <button
               onClick={() => setGlobalState('backModal', 'scale-0')}
               type="button"
               className="border-0 bg-transparent focus:outline-none"
             >
-              <FaTimes />
+              <FaTimes  className='text-gray-50'/>
             </button>
           </div>
 
