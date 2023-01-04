@@ -40,7 +40,7 @@ const UpdateProject = ({ project }) => {
   return (
     <div
       className={`fixed top-0 left-0 w-screen h-screen flex
-    items-center justify-center bg-black bg-opacity-50
+    items-center justify-center bg-black bg-opacity-50 font-globalFont
     transform transition-transform duration-300 ${updateModal}`}
     >
       <div
@@ -77,7 +77,7 @@ const UpdateProject = ({ project }) => {
           bg-transparent border rounded-xl mt-5"
           >
             <input
-              className="block w-full bg-transparent
+              className="block w-full rounded-xl bg-transparent
             border-0 text-sm text-slate-500 focus:outline-none
             focus:ring-0"
               type="text"
@@ -144,7 +144,7 @@ const UpdateProject = ({ project }) => {
             type="submit"
             className="inline-block px-6 py-2.5 bg-green-600
             text-white font-medium text-md leading-tight
-            rounded-full shadow-md hover:bg-green-700 mt-5"
+            rounded-xl shadow-md hover:bg-green-700 mt-5"
           >
             Update Project
           </button>

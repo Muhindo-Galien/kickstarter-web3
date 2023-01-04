@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header
-      className="flex justify-between items-center mt-4
+      className="flex justify-between items-center mt-4 z-40 font-globalFont
         py-1 px-2 bg-gray-700 shadow-lg fixed top-0 left-0 right-0 max-w-6xl cr:mx-auto rounded-full mx-2"
     >
       <Link

@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import AddButton from '../components/AddButton'
 import CreateProject from '../components/CreateProject'
 import Hero from '../components/Hero'
 import Projects from '../components/Projects'
@@ -13,12 +12,11 @@ const Home = () => {
     await loadProjects()
   }, [])
   return (
-    <>
+    <div className="max-w-6xl mx-auto relative">
       <Hero />
       <Projects projects={projects} />
       <CreateProject />
-      <AddButton />
-    </>
+    </div>
   )
 }
 

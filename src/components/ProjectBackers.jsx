@@ -55,7 +55,7 @@ const ProjectBackers = ({ backers }) => {
 }
 
 const Backer = ({ backer }) => (
-  <tr className="border-b border-gray-200 font-globalFont text-gray-200 font-semibold">
+  <tr className="border-b border-gray-200 font-globalFont text-gray-200 font-semibold font-globalFont">
     <td
       className="text-sm font-light
       px-6 py-4 whitespace-nowrap"

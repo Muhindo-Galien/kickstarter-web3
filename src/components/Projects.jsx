@@ -16,8 +16,8 @@ const Projects = ({ projects }) => {
   }, [projects, end])
 
   return (
-    <div className="flex flex-col px-6 mb-7">
-      <div className="flex justify-center items-center flex-wrap gap-4">
+    <div className="flex flex-col px-6 pb-14 font-globalFont">
+      <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-4 lg:gap-3 py-2.5 '>
         {collection.map((project, i) => (
           <ProjectCard key={i} project={project} />
         ))}
@@ -44,7 +44,7 @@ const ProjectCard = ({ project }) => {
   const expired = new Date().getTime() > Number(project?.expiresAt + '000')
 
   return (
-    <div id="projects" className="rounded-lg  bg-gray-700 shadow-lg w-full cr:w-64  px-2 py-3 font-globalFont ">
+    <div id="projects" className="rounded-lg  bg-gray-700 shadow-lg w-full cr:w-64  px-3 py-3 font-globalFont ">
       <Link to={'/projects/' + project.id}>
         <img
           src={project.imageURL}
@@ -53,29 +53,20 @@ const ProjectCard = ({ project }) => {
         />
 
         <div className="pt-2">
-          <h5 className=' font-semibold uppercase text-gray-200'>{truncate(project.title, 18, 0, 2)}</h5>
-          {/* <p className='text-gray-400 text-md lowercase'>{project.description.slice(0,30)}...</p> */}
+          {/* <h5 className=' font-medium capitalize text-gray-200 text-lg'>{truncate(project.title, 18, 0, 2)}</h5> */}
+          <h5 className=' font-medium capitalize text-gray-200 text-lg'>{project.title.slice(0,22)}...</h5>
+          <p className='text-gray-400 text-md lowercase'>{project.description.slice(0,30)}...</p>
 
           <div className="flex flex-col mt-2 ">
-            <div className="flex justify-start space-x-2 items-center mb-2 gap-2 bg-gray-50 shadow-md py-1 px-2 rounded-full">
-              <Identicons
-                className="rounded-full shadow-md "
-                string={project.owner}
-                size={30}
-              />
-              <small className="text-gray-400 font-medium text-sm overflow-hidden">
-                {truncate(project.owner, 8, 8, 20)}
-              </small>
-            </div>
             <div className='flex justify-between items-center '>
-              <small className="text-gray-300 rounded-lg  p-2 border border-gray-300 font-semibold">
+              <small className="text-gray-300 rounded-lg  p-2 bg-gray-800 font-semibold">
                 {expired ? 'Expired' : daysRemaining(project.expiresAt) + ' left'}
               </small>
               <div>
                 {expired ? (
-                  <small className="text-red-500 rounded-lg  px-2 py-2.5 border border-gray-300 font-semibold">Expired</small>
+                  <small className="text-red-500 rounded-lg  px-2 py-2.5 bg-gray-800 font-semibold">Expired</small>
                 ) : project?.status == 0 ? (
-                  <small className="text-gray-300 rounded-lg  px-2 py-2.5 border border-gray-300 font-semibold ">Open</small>
+                  <small className="text-gray-300 rounded-lg  px-2 py-2.5  bg-gray-800 font-semibold ">Open</small>
                 ) : project?.status == 1 ? (
                   <small className="bg-orange-500 rounded-lg  px-2 py-2.5 border border-gray-300 font-semibold">Accepted</small>
                 ) : project?.status == 2 ? (

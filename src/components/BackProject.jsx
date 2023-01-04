@@ -19,7 +19,7 @@ const BackProject = ({ project }) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-screen h-screen flex
+      className={`fixed top-0 left-0 w-screen h-screen flex font-globalFont 
     items-center justify-center bg-black bg-opacity-50
     transform transition-transform duration-300 ${backModal}`}
     >
@@ -75,7 +75,7 @@ const BackProject = ({ project }) => {
             type="submit"
             className="inline-block px-6 py-2.5 bg-orange-600
             text-white font-medium text-md leading-tight
-            rounded-full shadow-md hover:bg-orange-700 mt-5"
+            rounded-xl shadow-md hover:bg-orange-700 mt-5"
           >
             Back Project
           </button>

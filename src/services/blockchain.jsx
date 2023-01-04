@@ -14,6 +14,7 @@ const connectWallet = async () => {
     if (!ethereum) return toast.error("Please install Metamask")
     const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
     setGlobalState('connectedAccount', accounts[0]?.toLowerCase())
+    loadProjects()
   } catch (error) {
     reportError(error)
   }
@@ -24,6 +25,8 @@ const isWallectConnected = async () => {
     if (!ethereum) return toast.error("Please install Metamask")
     const accounts = await ethereum.request({ method: 'eth_accounts' })
     setGlobalState('connectedAccount', accounts[0]?.toLowerCase())
+    loadProjects()
+
 
     window.ethereum.on('chainChanged', (chainId) => {
       window.location.reload()
@@ -36,6 +39,7 @@ const isWallectConnected = async () => {
 
     if (accounts.length) {
       setGlobalState('connectedAccount', accounts[0]?.toLowerCase())
+      loadProjects()
     } else {
       toast.error('Please connect wallet.')
       console.log('No accounts found.')
@@ -127,7 +131,7 @@ const loadProject = async (id) => {
 
     setGlobalState('project', structuredProjects([project])[0])
   } catch (error) {
-    alert(JSON.stringify(error.message))
+   consile.log(JSON.stringify(error.message))
     reportError(error)
   }
 }

@@ -8,12 +8,12 @@ import {
 } from '../store'
 import { payoutProject } from '../services/blockchain'
 
-const ProjectDetails = ({ project }) => {
+const     ProjectDetails = ({ project }) => {
   const [connectedAccount] = useGlobalState('connectedAccount')
   const expired = new Date().getTime() > Number(project?.expiresAt + '000')
 
   return (
-    <div className="pt-24 mb-5 px-6 flex justify-center bg-gray-800">
+    <div className="pt-24 mb-5 px-6 flex justify-center bg-gray-800 font-globalFont">
       <div className="flex justify-center flex-col md:w-2/3">
         <div
           className="flex justify-start items-start
@@ -30,7 +30,7 @@ const ProjectDetails = ({ project }) => {
               <div>
                 <div className='flex justify-between'>
                   <div className="flex">
-                  <div className="flex justify-start space-x-2 items-center mb-2 gap-2 bg-blue-100 shadow-md py-1 px-2 rounded-full">
+                  <div className="flex justify-start space-x-2 items-center mb-2 gap-2 bg-gray-200 shadow-md py-1 px-2 rounded-full">
                       <Identicons
                         className="rounded-full shadow-md "
                         string={project.owner}

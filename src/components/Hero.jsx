@@ -3,7 +3,7 @@ const Hero = () => {
   const [stats] = useGlobalState('stats')
 
   return (
-    <div className="text-center bg-gray-800 pt-24 pb-14 px-6 max-w-4xl mx-auto text-gray-50">
+    <div className="text-center z-0 pt-24 pb-14 px-6 max-w-4xl mx-auto text-gray-50 font-globalFont">
       <div className="flex justify-center items-center space-x-2">
         <button
           type="button"

@@ -55,27 +55,27 @@ const CreateProject = () => {
     transform transition-transform duration-300 ${createModal}`}
     >
       <div
-        className="bg-white shadow-xl shadow-black
-        rounded-lg w-11/12 md:w-3/12 h-7/12 p-6"
+        className="bg-gray-800 shadow-xl shadow-black
+        rounded-lg w-11/12 md:w-3/12 h-7/12 p-4"
       >
         <form onSubmit={handleSubmit} className="flex flex-col">
           <div className="flex justify-between items-center">
-            <h1 className='text-2xl font-medium  py-4 font-globalFont capitalize '>Add Project</h1>
+            <h1 className='text-2xl font-medium text-gray-50 font-globalFont capitalize '>Add Project</h1>
             <button
               onClick={onClose}
               type="button"
               className="border-0 bg-transparent focus:outline-none"
             >
-              <FaTimes />
+              <FaTimes className='text-white'/>
             </button>
           </div>
 
-          <div className="flex justify-center items-center mt-5">
+          <div className="flex justify-center items-center mt-2">
             <div className="rounded-full overflow-hidden h-20 w-20">
               <img
                 src={
                   imageURL ||
-                  'https://thumbs.dreamstime.com/z/projects-concept-black-chalkboard-d-rendering-handwritten-top-view-office-desk-lot-business-office-supplies-79906734.jpg'
+                  'https://www.shutterstock.com/image-vector/picture-icon-vector-260nw-1353828443.jpg'
                 }
                 alt="project title"
                 className="h-full w-full object-cover cursor-pointer"
@@ -85,11 +85,12 @@ const CreateProject = () => {
 
           <div
             className="flex justify-between items-center
-          bg-transparent border rounded-full mt-5"
+          bg-transparent border rounded-xl mt-5"
           >
             <input
               className="block w-full bg-transparent
-            border-0 text-sm text-slate-500 focus:outline-none
+            border-0 text-sm text-slate-50 focus:outline-none
+            placeholder:text-slate-50
             focus:ring-0"
               type="text"
               name="title"
@@ -102,11 +103,12 @@ const CreateProject = () => {
 
           <div
             className="flex justify-between items-center
-          bg-transparent border rounded-full mt-5"
+          bg-transparent border rounded-xl mt-5"
           >
             <input
               className="block w-full bg-transparent
-            border-0 text-sm text-slate-500 focus:outline-none
+            border-0 text-sm text-slate-50 focus:outline-none
+            placeholder:text-slate-50
             focus:ring-0"
               type="number"
               step={0.01}
@@ -121,11 +123,12 @@ const CreateProject = () => {
 
           <div
             className="flex justify-between items-center
-          bg-transparent border rounded-full mt-5"
+          bg-transparent border rounded-xl mt-5"
           >
             <input
               className="block w-full bg-transparent
-            border-0 text-sm text-slate-500 focus:outline-none
+            border-0 text-sm text-slate-50 focus:outline-none
+            placeholder:text-slate-50  invert
             focus:ring-0"
               type="date"
               name="date"
@@ -138,11 +141,12 @@ const CreateProject = () => {
 
           <div
             className="flex justify-between items-center
-          bg-transparent border rounded-full mt-5"
+          bg-transparent border rounded-xl mt-5"
           >
             <input
               className="block w-full bg-transparent
-            border-0 text-sm text-slate-500 focus:outline-none
+            border-0 text-sm text-slate-50 focus:outline-none 
+            placeholder:text-slate-50
             focus:ring-0"
               type="url"
               name="imageURL"
@@ -155,11 +159,12 @@ const CreateProject = () => {
 
           <div
             className="flex justify-between items-center
-          bg-transparent border rounded-full mt-5"
+          bg-transparent border rounded-xl mt-5"
           >
             <textarea
               className="block w-full bg-transparent
-            border-0 text-sm text-slate-500 focus:outline-none
+            border-0 text-sm text-slate-50 focus:outline-none
+            placeholder:text-slate-50
             focus:ring-0"
               type="text"
               name="description"
@@ -174,7 +179,7 @@ const CreateProject = () => {
             type="submit"
             className="inline-block px-6 py-2.5 bg-orange-600
             text-white font-medium text-md leading-tight
-            rounded-full shadow-md hover:bg-orange-700 mt-5"
+            rounded-xl shadow-md hover:bg-orange-700 mt-5"
           >
             Submit Project
           </button>
